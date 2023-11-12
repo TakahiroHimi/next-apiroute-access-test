@@ -9,6 +9,11 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  console.log(req.headers.origin)
+  console.log('*********************** req ***********************')
+  console.log('origin', req.headers.origin)
+  console.log('referer', req.headers.referer)
+  console.log('all', req.headers)
+  console.log('*********************** req ***********************')
+
   res.status(200).json({ name: 'John Doe' })
 }
